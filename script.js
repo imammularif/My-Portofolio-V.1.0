@@ -462,14 +462,33 @@ document.querySelectorAll('.project-card').forEach(card => {
 
   // tap contact mobile
 
-  document.querySelectorAll('.contact-box').forEach(box => {
-  box.addEventListener('click', () => {
-    document.querySelectorAll('.contact-box')
-      .forEach(b => b.classList.remove('is-active'));
-    box.classList.add('is-active');
+document.querySelectorAll('.contact-box').forEach(box => {
+  box.addEventListener('touchstart', () => {
+    box.classList.add('tap-active');
+  });
+
+  box.addEventListener('touchend', () => {
+    box.classList.remove('tap-active');
+  });
+
+  box.addEventListener('touchcancel', () => {
+    box.classList.remove('tap-active');
   });
 });
 
+document.querySelectorAll('.social-icons a').forEach(icon => {
+  icon.addEventListener('touchstart', () => {
+    icon.classList.add('tap-active');
+  });
+
+  icon.addEventListener('touchend', () => {
+    icon.classList.remove('tap-active');
+  });
+
+  icon.addEventListener('touchcancel', () => {
+    icon.classList.remove('tap-active');
+  });
+});
 
 
 

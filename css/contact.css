@@ -488,11 +488,6 @@ body {
     color: #000;
   }
 
-/* bonus */
-  .contact-box.is-active {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 9px 10px yellow;
-}
 
 
 
@@ -511,29 +506,33 @@ body {
 
 
 /* ================= MOBILE TAP EFFECT ================= */
-@media (hover: none) and (pointer: coarse) {
 
-  .contact-box:active {
-    transform: scale(0.97);
-    box-shadow: 0 6px 10px yellow;
-  }
-
-  .contact-box:active .contact-icon {
-    transform: scale(1.15) rotate(4deg);
-  }
-
-  .social-icons a:active {
-    transform: scale(0.9);
-    background: rgba(255, 255, 0, 0.85);
-    color: #000;
-  }
+/* Contact Box */
+.contact-box.tap-active {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 9px 10px yellow;
 }
 
-/* ================= MOBILE SAFETY ================= */
+.contact-box.tap-active .contact-icon {
+  transform: scale(1.2) rotate(6deg);
+}
+
+/* Social Icons */
+.social-icons a.tap-active {
+  transform: translateY(-4px) scale(1.1);
+  background: rgba(255, 255, 0, 0.85);
+  color: #000;
+}
+
+
+/* ================= MOBILE UX SAFETY ================= */
 .contact-box,
 .social-icons a {
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
+
+
 
 
 
