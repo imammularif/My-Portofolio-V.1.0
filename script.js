@@ -95,22 +95,21 @@ function toggleDropdown() {
 
 
 // animation pembatas
-  const observerPEM = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        } else {
-          entry.target.classList.remove("show"); // biar animasi balik pas scroll ke atas
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
+const observerPEM = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      observer.unobserve(entry.target); // 🔥 sekali tampil, selesai
+    }
+  });
+}, {
+  threshold: 0.2
+});
 
-  document.querySelectorAll(
-    ".section-header, .section-divider"
-  ).forEach(el => observerPEM.observe(el));
+document
+  .querySelectorAll(".section-header, .section-divider")
+  .forEach(el => observerPEM.observe(el));
+
 
 
 
@@ -122,12 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
   /* BOX ANIMATION */
   const boxes = document.querySelectorAll('.box');
 
-  const boxObserver = new IntersectionObserver((entries) => {
+  const boxObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-      } else {
-        entry.target.classList.remove('show'); // reset saat scroll ke atas
+        observer.unobserve(entry.target); // 🚀 tampil sekali
       }
     });
   }, {
@@ -139,15 +137,14 @@ document.addEventListener("DOMContentLoaded", () => {
   /* SKILL BAR ANIMATION */
   const skills = document.querySelectorAll('.skill');
 
-  const skillObserver = new IntersectionObserver((entries) => {
+  const skillObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      const fill = entry.target.querySelector('.fill');
-      const percent = fill.dataset.percent;
-
       if (entry.isIntersecting) {
+        const fill = entry.target.querySelector('.fill');
+        const percent = fill.dataset.percent;
+
         fill.style.width = percent + '%';
-      } else {
-        fill.style.width = '0%'; // reset pas scroll ke atas
+        observer.unobserve(entry.target); // 🧠 isi sekali, aman
       }
     });
   }, {
@@ -160,15 +157,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
 // ANIMATED EDUCATION TIMELINE
 const timelineItems = document.querySelectorAll('.timeline-item');
 
-const timelineObserver = new IntersectionObserver((entries) => {
+const timelineObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show'); // hilang saat scroll ke atas
+      observer.unobserve(entry.target); // 🔥 stop observing = ga bakal ilang lagi
     }
   });
 }, {
@@ -182,12 +179,11 @@ timelineItems.forEach(item => timelineObserver.observe(item));
 // INTERSECTION OBSERVER (mirip timeline)
 const experienceCards = document.querySelectorAll('.experience-card');
 
-const observerExp = new IntersectionObserver((entries) => {
+const observerExp = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show'); // optional: hilang saat scroll ke atas
+      observer.unobserve(entry.target); // 🔥 muncul sekali, selesai
     }
   });
 }, {
@@ -275,26 +271,22 @@ window.addEventListener('scroll', () => {
 // animasi project homepage
 
 
-  const cards = document.querySelectorAll('.project-card');
+const cards = document.querySelectorAll('.project-card');
 
-  const observerProj = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          entry.target.classList.remove('hide');
-        } else {
-          entry.target.classList.remove('show');
-          entry.target.classList.add('hide');
-        }
-      });
-    },
-    {
-      threshold: 0.2
+const observerProj = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      entry.target.classList.remove('hide');
+      observer.unobserve(entry.target); // 🧠 sekali tampil, stop
     }
-  );
+  });
+}, {
+  threshold: 0.2
+});
 
-  cards.forEach(card => observerProj.observe(card));
+cards.forEach(card => observerProj.observe(card));
+
 
 
 
