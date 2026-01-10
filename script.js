@@ -462,21 +462,37 @@ document.querySelectorAll('.project-card').forEach(card => {
 
 const revealsCON = document.querySelectorAll(".reveal");
 
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
-  const revealPoint = 120;
-
-  revealsCON.forEach(el => {
-    const revealTop = el.getBoundingClientRect().top;
-
-    if (revealTop < windowHeight - revealPoint) {
-      el.classList.add("active");
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      observer.unobserve(entry.target); 
     }
   });
-}
+}, {
+  threshold: 0.2
+});
 
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+revealsCON.forEach(el => revealObserver.observe(el));
+
+// tap 2nd contact mobile
+
+document.querySelectorAll(".contact-box").forEach(box => {
+  box.addEventListener("click", () => {
+
+    // matiin yang lain
+    document.querySelectorAll(".contact-box.active")
+      .forEach(activeBox => {
+        if (activeBox !== box) {
+          activeBox.classList.remove("active");
+        }
+      });
+
+    // toggle yang ditap
+    box.classList.toggle("active");
+  });
+});
+
 
 
 
@@ -556,7 +572,6 @@ function typeLoop() {
 
 typeLoop();
 
-// icon scroll
 
 
 
