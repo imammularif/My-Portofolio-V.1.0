@@ -80,8 +80,8 @@ body {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, background 0.3s ease;
 
-  z-index: 9999;     /* 🔥 INI KUNCI UTAMA */
-  isolation: isolate;/* 🔒 ANTI DITEMBUS */
+  z-index: 9999;    
+  isolation: isolate;
 }
 
 
@@ -252,7 +252,7 @@ body {
 /* fix dropdown */
 @media (max-width: 768px) {
   .dropdown-content {
-    display: block;      /* WAJIB */
+    display: block;      
     position: relative;
     box-shadow: none;
     padding-left: 20px;
@@ -294,7 +294,7 @@ body {
 /* CARD */
 .certificate-card {
   position: relative;
-  overflow: visible; /* wajib */
+  overflow: visible; 
   background: #081f4e;
   border-radius: 14px;
   padding: 10px;
@@ -427,10 +427,6 @@ body {
     height: 140px;
   }
 }
-
-
-
-
 
 
 

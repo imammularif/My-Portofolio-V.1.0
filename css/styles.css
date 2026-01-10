@@ -65,8 +65,8 @@ html {
   display: inline-block;
   white-space: nowrap;
 
-  line-height: 1.2;      /* kunci tinggi baris */
-  min-height: 1.2em;     /* PENTING: cegah collapse */
+  line-height: 1.2;      
+  min-height: 1.2em;   
   margin: 0;
 
   border-right: 3px solid yellow;
@@ -131,7 +131,7 @@ html {
   border-radius: 50%;
 }
 
-/* ====================== MOBILE ======================== */
+/* MOBILE */
 @media (max-width: 768px) {
 
   .parallax-bg {
@@ -244,8 +244,6 @@ html {
   transform: translate(-50%, 0);
 }
 
-
-/* ----------------------------------------------------------------- */
 
 /* ================= NAV LINK BASE ================= */
 .topnav a,
@@ -427,7 +425,7 @@ html {
 }
 
 .box {
-  padding: 25px;          /* default desktop */
+  padding: 25px;          
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
   max-height: 1000px;
