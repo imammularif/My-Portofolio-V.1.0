@@ -740,14 +740,14 @@ html {
 
 
 /* icon ikut nyala */
-/* .small-box i {
+.small-box i {
   transition: transform 0.3s ease, color 0.3s ease;
-} */
+}
 
-/* .small-box:hover i {
+.small-box:hover i {
   color: #4da3ff;
   transform: scale(1.2);
-} */
+}
 
 .skill .fill {
   transition: width 1.2s ease, filter 0.3s ease;
@@ -1458,8 +1458,8 @@ align-items: flex-start;
 /* HOVER */
 .btn-primary:hover {
   transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 18px 40px rgba(255, 215, 0, 0.8);
-  background: linear-gradient(135deg, #fff08a, #ffd700);
+  /* box-shadow: 0 18px 40px rgba(255, 215, 0, 0.8); */
+  /* background: linear-gradient(135deg, #fff08a, #ffd700); */
 }
 
 .btn-primary:active {
@@ -1470,7 +1470,7 @@ align-items: flex-start;
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.6), transparent 60%);
+  /* background: radial-gradient(circle at center, rgba(255,255,255,0.6), transparent 60%); */
   opacity: 0;
   transition: opacity 0.4s ease;
 }
