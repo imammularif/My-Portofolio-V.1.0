@@ -416,7 +416,7 @@ body {
 
   .cv-bar {
     gap: 12px;
-    padding: 0 4%;
+    padding-bottom: 50px;
   }
 
   .cv-item {

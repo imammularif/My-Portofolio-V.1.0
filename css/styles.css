@@ -1332,21 +1332,14 @@ align-items: flex-start;
 
 /* MOBILE TAP EFFECT */
 .project-card.is-active {
-  --hoverY: -10px;
-  --hoverScale: 1.02;
-
-  box-shadow: 0 9px 10px yellow;
-  border-color: #6767f7;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 9px 10px yellow,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  background-color: #081f4e;
 }
 
-/* Hapus hover default di mobile */
-@media (hover: none) {
-  .project-card.show:hover {
-    transform: none;
-    box-shadow: none;
-    background: inherit;
-  }
-}
+
 
 /* IMAGE */
 .project-card img {
@@ -1511,6 +1504,28 @@ align-items: flex-start;
   .btn-primary {
     padding: 12px 28px;
     font-size: 14px;
+  }
+}
+
+
+/* khusus hoveer */
+@media (hover: hover) and (pointer: fine) {
+  .project-card.show:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow:
+      0 9px 10px yellow,
+      inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+    background-color: #081f4e; /* kunci biar gak item */
+  }
+}
+
+/* Hapus hover default di mobile */
+@media (hover: none) {
+  .project-card:hover,
+  .project-card.show:hover {
+    transform: none !important;
+    box-shadow: 0 9px 10px rgba(77, 163, 255, 0.6) !important;
+    background-color: #081f4e !important;
   }
 }
 
