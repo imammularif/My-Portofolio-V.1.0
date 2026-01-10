@@ -485,25 +485,48 @@ body {
 }
 
 
+/* ================= HOVER EFFECT (DESKTOP) ================= */
+@media (hover: hover) and (pointer: fine) {
+  .contact-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow:
+      0 14px 30px rgba(0, 0, 0, 0.45),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  }
 
-/* ================= HOVER (DESKTOP) ================= */
+  .contact-box:hover .contact-icon {
+    transform: scale(1.2) rotate(6deg);
+  }
 
-.reveal.active.contact-box:hover {
-  transform: translateY(-10px) scale(1.03);
+  .social-icons a:hover {
+    transform: translateY(-4px) scale(1.1);
+    background: rgba(255, 255, 0, 0.85);
+    color: #000;
+  }
+}
+
+/* ================= TAP EFFECT (MOBILE) ================= */
+.contact-box:active {
+  transform: scale(0.97);
+  background: rgba(255, 255, 255, 0.14);
   box-shadow:
-    0 14px 28px rgba(255, 215, 0, 0.45),
-    inset 0 0 0 1px rgba(255,255,255,0.25);
+    0 10px 20px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
-.reveal.active.contact-box:hover .contact-icon {
-  transform: scale(1.2) rotate(-6deg);
-}
-
-.social-icons a:hover {
-  transform: translateY(-4px) scale(1.1);
+.social-icons a:active {
+  transform: scale(0.9);
   background: yellow;
-  color: #081f4e;
+  color: #000;
 }
+
+/* ================= SMOOTH FEEL ================= */
+.contact-box,
+.social-icons a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 
 
 
