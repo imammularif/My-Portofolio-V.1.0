@@ -155,6 +155,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// icon animated scroll
+
+const iconItems = document.querySelectorAll('.icon-item');
+
+const iconObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target); // 🚀 muncul sekali, no reset
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+iconItems.forEach(item => iconObserver.observe(item));
+
+
 
 
 

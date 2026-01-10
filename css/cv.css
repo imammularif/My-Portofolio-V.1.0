@@ -369,6 +369,26 @@ body {
   color: #000;
 }
 
+
+  /* BUTTON */
+  .cv-item a {
+    align-self: flex-end;    /* tombol ke kanan */
+    padding: 8px 18px;       /* tap friendly */
+    font-size: 0.85rem;
+  }
+
+  /* HOVER DIGANTI FEEL TAP */
+  .cv-item:hover {
+    transform: none;        /* mobile gak perlu hover naik */
+    box-shadow: 0 6px 16px rgba(255,255,0,0.25);
+  }
+
+  /* ANIMASI SCROLL LEBIH HALUS */
+  .cv-item {
+    transform: translateY(20px);
+  }
+}
+
 /* AWAL:  */
 .cv-item {
   opacity: 0;
@@ -392,28 +412,33 @@ body {
 
 /* mobile responsive */
 
-@media (max-width: 768px) {
+/* ================= MOBILE CV ================= */
+@media (max-width: 480px) {
 
   .cv-bar {
-    max-width: 100%;
-    padding: 0 10px;          /* napas kiri kanan */
     gap: 12px;
+    padding: 0 4%;
   }
 
   .cv-item {
-    flex-direction: column;  /* ⬅️ vertikal */
+    flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    padding: 14px 16px;      /* lebih ramping */
+
+    padding: 14px 16px;
+    border-radius: 14px;
+
+    /* scroll animation base */
+    opacity: 0;
+    transform: translateY(20px);
   }
 
-  .cv-item.latest {
-    border-width: 1px;
-  }
-
-  /* BARIS ATAS: TAG + TITLE */
-  .cv-item .cv-tag {
-    align-self: flex-start;
+  .cv-item.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
   }
 
   .cv-text {
@@ -422,24 +447,25 @@ body {
 
   .cv-year {
     font-size: 0.8rem;
+    opacity: 0.75;
   }
 
-  /* BUTTON */
+  .cv-tag {
+    font-size: 0.6rem;
+    padding: 3px 10px;
+  }
+
   .cv-item a {
-    align-self: flex-end;    /* tombol ke kanan */
-    padding: 8px 18px;       /* tap friendly */
-    font-size: 0.85rem;
+    align-self: flex-end;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    border-radius: 10px;
   }
 
-  /* HOVER DIGANTI FEEL TAP */
-  .cv-item:hover {
-    transform: none;        /* mobile gak perlu hover naik */
-    box-shadow: 0 6px 16px rgba(255,255,0,0.25);
-  }
-
-  /* ANIMASI SCROLL LEBIH HALUS */
-  .cv-item {
-    transform: translateY(20px);
+  /* mobile tap feel */
+  .cv-item:active {
+    transform: scale(0.97);
+    box-shadow: 0 6px 14px rgba(255,255,0,0.25);
   }
 }
 

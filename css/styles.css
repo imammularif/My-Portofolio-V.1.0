@@ -914,6 +914,21 @@ html {
   transform: scale(0.95);
 }
 
+/* Icon reveal animation */
+.icon-item {
+  opacity: 0;
+  transform: translateY(24px) scale(0.95);
+}
+
+.icon-item.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+
 
 
 
@@ -1324,11 +1339,11 @@ align-items: flex-start;
 
 /* MOBILE TAP EFFECT */
 .project-card.is-active {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 
-    0 9px 10px yellow,
-    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  background: linear-gradient(160deg, #0a2a6a, #6767f7);
+  --hoverY: -10px;
+  --hoverScale: 1.02;
+
+  box-shadow: 0 9px 10px yellow;
+  border-color: #6767f7;
 }
 
 /* Hapus hover default di mobile */
@@ -1412,11 +1427,7 @@ align-items: flex-start;
   box-shadow: 
     0 9px 10px yellow,
     inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  /* background: linear-gradient(
-    160deg,
-    #0a2a6a,
-    #6767f7
-  ); */
+
 }
 
 .project-card h3,
@@ -1425,14 +1436,14 @@ align-items: flex-start;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.project-card.show:hover h3 {
+/* .project-card.show:hover h3 {
   transform: translateY(-2px);
   color: #ffd700;
 }
 
 .project-card.show:hover p {
   transform: translateY(-1px);
-}
+} */
 
 .view-all {
   margin-top: -30px;
