@@ -460,6 +460,8 @@ document.querySelectorAll('.project-card').forEach(card => {
 
   // CONTACT PAGE ANIMATION
 
+
+
   // tap contact mobile
 
 document.querySelectorAll('.contact-box').forEach(box => {
