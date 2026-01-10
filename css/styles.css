@@ -1568,7 +1568,7 @@ align-items: flex-start;
 /* ================= FOOTER ================= */
 
 .footer {
-  margin-top: 30px;
+  margin-top: 50px;
   padding: 20px 20px 20px;
   text-align: center;
   background: linear-gradient(180deg, #081f4e, #040b1f);

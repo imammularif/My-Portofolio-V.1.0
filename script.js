@@ -475,24 +475,6 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 
 revealsCON.forEach(el => revealObserver.observe(el));
 
-// tap 2nd contact mobile
-
-document.querySelectorAll(".contact-box").forEach(box => {
-  box.addEventListener("click", () => {
-
-    // matiin yang lain
-    document.querySelectorAll(".contact-box.active")
-      .forEach(activeBox => {
-        if (activeBox !== box) {
-          activeBox.classList.remove("active");
-        }
-      });
-
-    // toggle yang ditap
-    box.classList.toggle("active");
-  });
-});
-
 
 
 
