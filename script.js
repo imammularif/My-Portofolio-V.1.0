@@ -546,6 +546,16 @@ function typeLoop() {
 
 typeLoop();
 
+// icon scroll
+
+
+
+
+
+
+
+
+
 
 
 

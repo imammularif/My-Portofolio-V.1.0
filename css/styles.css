@@ -168,6 +168,19 @@ html {
   }
 }
 
+@media (max-width: 768px) {
+  .typing-text {
+    line-height: 1.2;
+    height: 1.2em;          
+    display: inline-flex;   
+    align-items: center;    
+    
+    border-right: 2px solid yellow; 
+    transform: translateY(0); 
+  }
+}
+
+
 
 /* ================= NAVIGASI ================= */
 
@@ -804,6 +817,104 @@ html {
   }
 
 }
+
+
+/* ICON SECTION */
+
+.icon-section {
+  padding: 90px 8%;
+  text-align: center;
+  background: linear-gradient(135deg, #090319, #081f4e);
+  margin-top: 40px;
+}
+
+.icon-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  margin-top: -20px;
+  color: #fff;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 24px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.icon-item {
+  height: 80px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.icon-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.icon-item[title="SQL"] img {
+  width: 260px !important;
+  height: 26px !important;
+  max-width: none;
+  object-fit: contain;
+}
+
+.icon-item[title="mysql"] img {
+  width: 260px !important;
+  height: 60px !important;
+  max-width: none;
+  object-fit: contain;
+}
+
+.icon-item[title="figma"] img {
+  width: 260px !important;
+  height: 60px !important;
+  max-width: none;
+  object-fit: contain;
+}
+
+.icon-item[title="chatgbt"] img {
+  width: 260px !important;
+  height: 50px !important;
+  max-width: none;
+  object-fit: contain;
+}
+
+.icon-item[title="ps"] img {
+  width: 260px !important;
+  height: 60px !important;
+  max-width: none;
+  object-fit: contain;
+}
+
+.icon-item[title="webtoon"] img {
+  width: 260px !important;
+  height: 60px !important;
+  max-width: none;
+  object-fit: contain;
+}
+
+.icon-item:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(255,255,0,0.35);
+}
+
+/* Mobile tap */
+.icon-item:active {
+  transform: scale(0.95);
+}
+
+
 
 
 /* ================= EDUCATION ================= */
