@@ -622,7 +622,6 @@ button.addEventListener('click', (e) => {
 
 
 
-// certificate page animation (soon)
 
 
 
