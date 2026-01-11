@@ -647,12 +647,12 @@ html {
 }
 
 .fill {
+  will-change: width;
   height: 100%;
   width: 0;
   background: linear-gradient(90deg, #1e90ff, #00bfff);
   border-radius: 10px;
   transition: width 1s ease;
-  will-change: width;
 }
 
 
