@@ -573,43 +573,65 @@ typeLoop();
 
 
 
-// input error
+// input error/top upp sucsess
 
-
-// Ambil form dan tombol
+\
 const form = document.querySelector('.contact-form');
 const inputs = form.querySelectorAll('input, textarea');
 const button = form.querySelector('button');
 
-// Buat span error **di atas input**
+// Ambil toast
+const toast = document.getElementById('toastSuccess');
+
+// Buat span error di atas input (sekali saja)
 inputs.forEach(input => {
   const span = document.createElement('span');
   span.classList.add('error-msg');
-  input.insertAdjacentElement('beforebegin', span); // di atas input
+  span.textContent = ' '; 
+  input.insertAdjacentElement('beforebegin', span);
 });
 
 button.addEventListener('click', (e) => {
-  e.preventDefault(); // cegah reload
+  e.preventDefault();
 
   let isValid = true;
 
   inputs.forEach(input => {
-    const errorMsg = input.previousElementSibling; // span di atas
+    const errorMsg = input.previousElementSibling;
+
     if (!input.value.trim()) {
       errorMsg.textContent = 'Harap diisi dulu';
+      errorMsg.classList.add('show');
       input.style.border = '2px solid #ff4d4f';
       isValid = false;
     } else {
-      errorMsg.textContent = '';
+      errorMsg.textContent = ' ';
+      errorMsg.classList.remove('show');
       input.style.border = 'none';
     }
   });
 
   if (isValid) {
-    alert('Form berhasil dikirim! 🚀');
+ 
+    toast.classList.add('show');
+
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2500);
+
     form.reset();
+
+    // reset error state 
+    inputs.forEach(input => {
+      const errorMsg = input.previousElementSibling;
+      errorMsg.textContent = ' ';
+      errorMsg.classList.remove('show');
+      input.style.border = 'none';
+    });
   }
 });
+
+
 
 
 

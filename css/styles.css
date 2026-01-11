@@ -1617,7 +1617,8 @@ align-items: flex-start;
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 14px 35px;
+  padding: 14px 50px;
+  padding-left: 20px; /* kecilin biar makin ke kiri */
   margin-bottom: -50px;
   border-radius: 10px;
   border: none;
@@ -1695,7 +1696,7 @@ align-items: flex-start;
 
   .input-row {
     flex-direction: column;
-    gap: 12px;
+    gap: 1px;
   }
 
   .contact-form h2 {
@@ -1822,8 +1823,6 @@ align-items: flex-start;
   }
 
 
-
-
 /* ================= RESPONSIVE GRID ================= */
 @media (max-width: 1024px) {
   .contact-grid {
@@ -1903,8 +1902,62 @@ align-items: flex-start;
   color: #ff4d4f;
   font-size: 0.85rem;
   margin-top: 4px;
-  min-height: 18px; /* supaya layout nggak lompat */
+
+  min-height: 18px;   /* ruang selalu ada */
+  line-height: 18px;  /* kunci tinggi text */
+  visibility: hidden; /* sembunyi tanpa hilang ruang */
 }
+
+.error-msg.show {
+  visibility: visible;
+}
+
+
+@media (max-width: 480px) {
+  .error-msg {
+    font-size: 0.75rem;
+    min-height: 14px;
+    line-height: 14px;
+    margin-top: 5px;
+    text-align: left;
+    padding-left: 2px;
+  }
+}
+
+/* top up */
+.toast {
+  position: fixed;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  background: #22c55e;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+
+  transition: top 0.4s ease;
+}
+
+.toast.show {
+  top: 20px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .toast {
+    width: calc(100% - 32px);
+    text-align: center;
+    font-size: 0.85rem;
+  }
+}
+
+
 
 
 
