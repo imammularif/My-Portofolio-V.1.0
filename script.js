@@ -1,3 +1,6 @@
+// alert("JS MASUK");
+
+
 
 /* ========================== LAYOUT RESPONSIVE ============================== */
 
@@ -20,12 +23,12 @@ if (window.innerWidth > 768 && btn && menu) {
     if (container) {
       container.style.display = "flex";
       container.style.flexDirection = "column";
-      container.style.alignItems = "center";   // 🔥 NENGAH
+      container.style.alignItems = "center"; 
     }
 
     if (leftBox) {
       leftBox.style.width = "100%";
-      leftBox.style.maxWidth = "500px";        // biar gak kepanjangan
+      leftBox.style.maxWidth = "500px";     
     }
 
     if (rightBox) {
@@ -99,7 +102,7 @@ const observerPEM = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
-      observer.unobserve(entry.target); // 🔥 sekali tampil, selesai
+      observer.unobserve(entry.target); 
     }
   });
 }, {
@@ -113,7 +116,7 @@ document
 
 
 
-// ABOUT
+// ABOUT PAGE ANIMATIONS
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -124,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-        observer.unobserve(entry.target); // 🚀 tampil sekali
+        observer.unobserve(entry.target); 
       }
     });
   }, {
@@ -143,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const percent = fill.dataset.percent;
 
         fill.style.width = percent + '%';
-        observer.unobserve(entry.target); // 🧠 isi sekali, aman
+        observer.unobserve(entry.target);
       }
     });
   }, {
@@ -154,7 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// icon animated scroll
+
+// ICON PAGE ANIMATION
 
 const iconItems = document.querySelectorAll('.icon-item');
 
@@ -162,7 +166,7 @@ const iconObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
-      observer.unobserve(entry.target); // 🚀 muncul sekali, no reset
+      observer.unobserve(entry.target); 
     }
   });
 }, {
@@ -173,8 +177,6 @@ iconItems.forEach(item => iconObserver.observe(item));
 
 
 
-
-
 // ANIMATED EDUCATION TIMELINE
 const timelineItems = document.querySelectorAll('.timeline-item');
 
@@ -182,7 +184,7 @@ const timelineObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
-      observer.unobserve(entry.target); // 🔥 stop observing = ga bakal ilang lagi
+      observer.unobserve(entry.target); 
     }
   });
 }, {
@@ -193,14 +195,14 @@ timelineItems.forEach(item => timelineObserver.observe(item));
 
 
 
-// INTERSECTION OBSERVER (mirip timeline)
+// ANIMATED EXPERIENCE CARDS
 const experienceCards = document.querySelectorAll('.experience-card');
 
 const observerExp = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
-      observer.unobserve(entry.target); // 🔥 muncul sekali, selesai
+      observer.unobserve(entry.target); 
     }
   });
 }, {
@@ -211,9 +213,7 @@ experienceCards.forEach(card => observerExp.observe(card));
 
 
 
-
-
-// paralax
+// PARALLAX SCROLLING
 const parallaxBg = document.querySelector('.parallax-bg');
 
 window.addEventListener('scroll', () => {
@@ -285,8 +285,7 @@ window.addEventListener('scroll', () => {
 
 
 
-// animasi project homepage
-
+// PROJECT/CERTIFICATE CARDS ANIMATION
 
 const cards = document.querySelectorAll('.project-card');
 
@@ -295,7 +294,7 @@ const observerProj = new IntersectionObserver((entries, observer) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
       entry.target.classList.remove('hide');
-      observer.unobserve(entry.target); // 🧠 sekali tampil, stop
+      observer.unobserve(entry.target);
     }
   });
 }, {
@@ -308,7 +307,6 @@ cards.forEach(card => observerProj.observe(card));
 
 
 // ABOUT MENUS
-
 
   const reveals = document.querySelectorAll(".reveal");
 
@@ -332,7 +330,6 @@ cards.forEach(card => observerProj.observe(card));
 
 
 // Tap skill mobile
-
 document.querySelectorAll('.box, .small-box').forEach(el => {
 
   // saat jari menempel
@@ -436,7 +433,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-        observer.unobserve(entry.target); // animasi cuma sekali
+        observer.unobserve(entry.target); 
       }
     });
   }, {
@@ -448,17 +445,12 @@ document.querySelectorAll('.project-card').forEach(card => {
 
 // active hover porto
 
-
   const currentPage = window.location.pathname.split("/").pop();
   const portfolioPages = ["certificate.html", "mini_project.html"];
 
   if (portfolioPages.includes(currentPage)) {
     document.getElementById("portfolioBtn").classList.add("active");
   }
-
-
-  // CONTACT PAGE ANIMATION
-
 
 
   // tap contact mobile
@@ -490,8 +482,6 @@ document.querySelectorAll('.social-icons a').forEach(icon => {
     icon.classList.remove('tap-active');
   });
 });
-
-
 
 
 
@@ -575,7 +565,6 @@ typeLoop();
 
 // input error/top upp sucsess
 
-
 const form = document.querySelector('.contact-form');
 const inputs = form.querySelectorAll('input, textarea');
 const button = form.querySelector('button');
@@ -630,6 +619,21 @@ button.addEventListener('click', (e) => {
     });
   }
 });
+
+
+
+// certificate page animation (soon)
+
+
+
+
+
+
+
+
+  
+
+
 
 
 
