@@ -131,6 +131,10 @@ html {
   border-radius: 50%;
 }
 
+.profile .right img:hover {
+  transform: translateY(-10px); 
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
 
@@ -163,8 +167,10 @@ html {
   }
 
   .profile .right img {
-    width: 90px;
-    height: 90px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: -25px; 
   }
 }
 
