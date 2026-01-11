@@ -575,7 +575,7 @@ typeLoop();
 
 // input error/top upp sucsess
 
-\
+
 const form = document.querySelector('.contact-form');
 const inputs = form.querySelectorAll('input, textarea');
 const button = form.querySelector('button');
