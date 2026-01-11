@@ -111,14 +111,6 @@ document
   .forEach(el => observerPEM.observe(el));
 
 
-// 2nd tap foto profile mobile
-const img = document.querySelector('.profile .right img');
-
-img.addEventListener('click', () => {
-  img.classList.toggle('toggled'); // tap pertama geser, tap kedua balik
-});
-
-
 
 
 // ABOUT

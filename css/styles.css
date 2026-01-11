@@ -154,6 +154,8 @@ html {
     align-items: center;
     padding: 80px 6% 200px;
     gap: 14px;
+    position: relative;
+    left: -10px; 
   }
 
   .profile .left h1 {
@@ -167,10 +169,10 @@ html {
   }
 
   .profile .right img {
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
     position: relative;
-    left: -25px; 
+    left: -10px; 
   }
 }
 
@@ -183,6 +185,13 @@ html {
     
     border-right: 2px solid yellow; 
     transform: translateY(0); 
+  }
+}
+
+/* Matikan hover (mobile) */
+@media (max-width: 768px) {
+  .profile .right img:hover {
+    transform: none;
   }
 }
 
