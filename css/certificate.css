@@ -366,6 +366,7 @@ body {
   opacity: 0.9;
 }
 
+
 /* hover card */
 .certificate-card:hover {
   transform: translateY(-12px) scale(1.02);
@@ -374,7 +375,6 @@ body {
     inset 0 0 0 1px rgba(255, 255, 255, 0.25);
 
 }
-
 
 .certificate-card img {
   width: 100%;
@@ -390,8 +390,51 @@ body {
   transform: scale(1.05);     
 }
 
+/* =========================
+   DESKTOP (hover normal)
+========================= */
+@media (hover: hover) and (pointer: fine) {
+  .certificate-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow:
+      0 9px 10px yellow,
+      inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  }
+
+  .certificate-card:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.certificate-card {
+  -webkit-tap-highlight-color: transparent;
+}
 
 
+/* =========================
+   MOBILE (tap friendly)
+========================= */
+@media (hover: none) and (pointer: coarse) {
+  .certificate-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .certificate-card:active,
+  .certificate-card:focus-visible {
+    transform: scale(0.97);
+    box-shadow:
+      0 6px 8px rgba(255, 255, 0, 0.6);
+  }
+
+  .certificate-card img {
+    transition: transform 0.3s ease;
+  }
+
+  .certificate-card:active img,
+  .certificate-card:focus-visible img {
+    transform: scale(1.03);
+  }
+}
 
 
 
@@ -406,7 +449,6 @@ body {
     gap: 30px;
   }
 }
-
 
 
 /* MOBILE */
