@@ -1,6 +1,3 @@
-// alert("JS MASUK");
-
-
 
 /* ========================== LAYOUT RESPONSIVE ============================== */
 
@@ -619,6 +616,8 @@ button.addEventListener('click', (e) => {
     });
   }
 });
+
+
 
 
 
