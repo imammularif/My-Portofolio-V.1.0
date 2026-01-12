@@ -146,6 +146,21 @@ body {
   transform: translateX(-50%) scaleX(1);
 }
 
+/* ----------------------------------------------------------------------------------- */
+
+
+/* ================= DROPDOWN ACTIVE ================= */
+.dropdown.active-parent .dropbtn::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.dropdown.active .dropbtn::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+
+/* ---------------------------------------------------------------------------------- */
+
 /* ================= NAV MENU ================= */
 .nav-menu {
   display: flex;
@@ -617,3 +632,4 @@ body {
     font-size: 1.5rem;
   }
 }
+
