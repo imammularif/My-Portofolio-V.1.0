@@ -632,9 +632,7 @@ button.addEventListener('click', (e) => {
 
 
 // btn scroll/animated
-
 document.addEventListener("DOMContentLoaded", () => {
-  // semua elemen scroll
   const scrollItems = document.querySelectorAll(".certificate-card, .view-all .btn-primary");
 
   const observer = new IntersectionObserver(
@@ -642,15 +640,44 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
-          observer.unobserve(entry.target); // biar sekali animasi
+          // Jangan unobserve kalau mau animasi bisa retrigger di mobile
+          // observer.unobserve(entry.target);
         }
       });
-    },
-    { threshold: 0.2 }
+    }, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1 // lebih rendah biar mobile detect lebih awal
+    }
   );
 
   scrollItems.forEach(el => observer.observe(el));
 });
+
+
+// contact /send
+
+const scrollElements = document.querySelectorAll('.contact-box, .contact-form, .contact-image');
+
+function handleScrollAnimation() {
+  const windowHeight = window.innerHeight;
+
+  scrollElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+
+    // Hanya tambahkan class sekali, jangan di-remove
+    if(rect.top < windowHeight && !el.classList.contains('scroll-active')) {
+      el.classList.add('scroll-active');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScrollAnimation);
+window.addEventListener('load', handleScrollAnimation);
+
+
+
+
 
 
 
