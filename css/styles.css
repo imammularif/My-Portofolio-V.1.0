@@ -293,28 +293,6 @@ html {
 
 /* ====================== PARALLAX SECTION ======================== */
 
-.typing-text {
-  display: inline-block;
-  white-space: nowrap;
-
-  line-height: 1.2;      
-  min-height: 1.2em;   
-  margin: 0;
-
-  border-right: 3px solid yellow;
-  padding-right: 0px;
-
-  animation: blink 0.9s step-end infinite;
-}
-
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-
 /* PARALLAX SECTION */
 .parallax-section {
   position: relative;
@@ -433,8 +411,30 @@ html {
 
 /* ============================= HEADLINE & IMG ============================================ */
 
-/* Content 1 */
+/* typing text */
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
 
+  line-height: 1.2;      
+  min-height: 1.2em;   
+  margin: 0;
+
+  border-right: 3px solid yellow;
+  padding-right: 0px;
+
+  animation: blink 0.9s step-end infinite;
+}
+
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+/* Content 1 */
 .profile {
   display: flex;
   height: 100vh;
