@@ -13,21 +13,17 @@
 <!-- NAVIGATION BAR -->
 <nav class="topnav">
   <!-- HAMBURGER -->
-  <button class="hamburger" onclick="toggleMenu(this)">☰</button>
-
+  <button class="hamburger" id="hamburger">☰</button>
+  
   <!-- MENU -->
   <div class="nav-menu">
-
     <a href="index.html">Home</a>
-
-    <a href="index.html#about">About</a>
-
+    <a href="#about">About</a>
     <a href="cv.html">Download CV</a>
 
     <!-- DROPDOWN -->
-
-    <div class="dropdown active-parent">
-      <button class="dropbtn" id="portfolioBtn" type="button">
+    <div class="dropdown">
+      <button class="dropbtn" type="button" onclick="toggleDropdown()">
         Portofolio
         <span class="arrow"></span>
       </button>
@@ -38,7 +34,9 @@
       </div>
     </div>
 
-    <a href="index.html#contact">Contact</a>
+    <!-- CONTACT MENU -->
+    <a href="#contact">Contact</a>
+
   </div>
 </nav>
 
