@@ -531,6 +531,37 @@ window.addEventListener('scroll', handleScrollAnimation);
 window.addEventListener('load', handleScrollAnimation);
 
 
+// tap dropdown mobile
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdowns = document.querySelectorAll(".dropdown");
+
+    dropdowns.forEach(dropdown => {
+      const btn = dropdown.querySelector(".dropbtn");
+
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        // tutup dropdown lain
+        dropdowns.forEach(d => {
+          if (d !== dropdown) d.classList.remove("active");
+        });
+
+        // toggle dropdown ini
+        dropdown.classList.toggle("active");
+      });
+    });
+
+    // tap di luar = close semua
+    document.addEventListener("click", () => {
+      dropdowns.forEach(d => d.classList.remove("active"));
+    });
+  });
+
+
+
+
 
 
 

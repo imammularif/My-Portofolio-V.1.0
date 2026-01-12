@@ -197,6 +197,7 @@ html {
   cursor: pointer;
   color: yellow;
 }
+
 /* ================= DROPDOWN ================= */
 .dropdown {
   position: relative;
@@ -272,11 +273,59 @@ html {
 }
 
 /* hover item */
-.dropdown-content a:hover {
+/* .dropdown-content a:hover {
   background: rgba(255, 215, 0, 0.15);
   padding-left: 24px;
+} */
+
+/* ================= MOBILE DROPDOWN ================= */
+
+@media (max-width: 768px) {
+  .dropdown-content a {
+    padding: 8px 14px !important;
+    line-height: 1.2;
+    font-size: 15px;
+    left: -10px;
+  }
 }
 
+
+@media (max-width: 768px) {
+
+  /* matiin hover behaviour */
+  .dropdown:hover .dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+  }
+
+  /* dropdown via tap */
+  .dropdown.active .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+
+  /* underline ikut tap */
+  .dropdown:hover .dropbtn::after {
+    width: 0;
+  }
+
+  .dropdown.active .dropbtn::after {
+    width: 60%;
+  }
+
+  /* biar tap area enak */
+  .dropbtn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .arrow {
+  transform: translateX(-55px); 
+}
+}
 
 
 /* --- ARROW --- */
@@ -326,13 +375,7 @@ html {
   }
 }
 
-/* hover mobile cantact fix */
-@media (max-width: 768px) {
-  .nav-menu a::after,
-  .dropbtn::after {
-    bottom: 4px;          
-  }
-}
+
 
 
 
