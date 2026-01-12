@@ -155,17 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// RENDER
-window.addEventListener("load", () => {
-  requestAnimationFrame(() => {
-    document.querySelectorAll(".fill").forEach(fill => {
-      fill.style.width = fill.dataset.width;
-    });
-  });
-});
-
-
-
 
 // ICON PAGE ANIMATION
 
@@ -338,100 +327,7 @@ cards.forEach(card => observerProj.observe(card));
   reveals.forEach(el => observerREV.observe(el));
 
 
-// Tap skill mobile
-document.querySelectorAll('.box, .small-box').forEach(el => {
 
-  // saat jari menempel
-  el.addEventListener('pointerdown', () => {
-    el.classList.add('is-active');
-  });
-
-  // saat jari dilepas
-  el.addEventListener('pointerup', () => {
-    el.classList.remove('is-active');
-  });
-
-  // kalau geser keluar / cancel
-  el.addEventListener('pointerleave', () => {
-    el.classList.remove('is-active');
-  });
-
-  el.addEventListener('pointercancel', () => {
-    el.classList.remove('is-active');
-  });
-
-});
-
-
-// tap edu mobile
-
-document.querySelectorAll('.timeline-box').forEach(box => {
-
-  box.addEventListener('pointerdown', () => {
-    box.classList.add('is-active');
-  });
-
-  box.addEventListener('pointerup', () => {
-    box.classList.remove('is-active');
-  });
-
-  box.addEventListener('pointerleave', () => {
-    box.classList.remove('is-active');
-  });
-
-  box.addEventListener('pointercancel', () => {
-    box.classList.remove('is-active');
-  });
-
-});
-
-
-// tap exp mobile
-document.querySelectorAll('.experience-card').forEach(card => {
-
-  card.addEventListener('pointerdown', () => {
-    card.classList.add('active');
-  });
-
-  card.addEventListener('pointerup', () => {
-    card.classList.remove('active');
-  });
-
-  card.addEventListener('pointerleave', () => {
-    card.classList.remove('active');
-  });
-
-  card.addEventListener('pointercancel', () => {
-    card.classList.remove('active');
-  });
-
-});
-
-
-// tap pro/cer mobile
-
-document.querySelectorAll('.project-card').forEach(card => {
-
-  // saat jari menempel
-  card.addEventListener('pointerdown', () => {
-    card.classList.add('is-active');
-  });
-
-  // saat jari dilepas
-  card.addEventListener('pointerup', () => {
-    card.classList.remove('is-active');
-  });
-
-  // kalau geser keluar / cancel
-  card.addEventListener('pointerleave', () => {
-    card.classList.remove('is-active');
-  });
-
-  card.addEventListener('pointercancel', () => {
-    card.classList.remove('is-active');
-  });
-
-});
 
 
 // cv animation
@@ -450,47 +346,6 @@ document.querySelectorAll('.project-card').forEach(card => {
   });
 
   cvItems.forEach(item => observer.observe(item));
-
-
-// active hover porto
-
-  const currentPage = window.location.pathname.split("/").pop();
-  const portfolioPages = ["certificate.html", "mini_project.html"];
-
-  if (portfolioPages.includes(currentPage)) {
-    document.getElementById("portfolioBtn").classList.add("active");
-  }
-
-
-  // tap contact mobile
-
-document.querySelectorAll('.contact-box').forEach(box => {
-  box.addEventListener('touchstart', () => {
-    box.classList.add('tap-active');
-  });
-
-  box.addEventListener('touchend', () => {
-    box.classList.remove('tap-active');
-  });
-
-  box.addEventListener('touchcancel', () => {
-    box.classList.remove('tap-active');
-  });
-});
-
-document.querySelectorAll('.social-icons a').forEach(icon => {
-  icon.addEventListener('touchstart', () => {
-    icon.classList.add('tap-active');
-  });
-
-  icon.addEventListener('touchend', () => {
-    icon.classList.remove('tap-active');
-  });
-
-  icon.addEventListener('touchcancel', () => {
-    icon.classList.remove('tap-active');
-  });
-});
 
 
 
