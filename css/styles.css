@@ -342,9 +342,6 @@ html {
   border-radius: 50%;
 }
 
-.profile .right img:hover {
-  transform: translateY(-10px); 
-}
 
 
 /* responive */
@@ -698,11 +695,6 @@ html {
   transition: all 0.3s ease;
 }
 
-.tag:hover {
-  background: #4da3ff;
-  color: #111;
-  transform: translateY(-2px);
-}
 
 
 .box.skills {
@@ -739,50 +731,13 @@ html {
     background-color 0.45s ease;
 }
 
-.box:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 
-    0 9px 10px yellow,
-    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-  /* background: linear-gradient(
-    160deg,
-    #0a2a6a,
-    #6767f7
-  ); */
-}
+
 
 .small-box {
   transition:
     transform 0.4s cubic-bezier(.4,0,.2,1),
     box-shadow 0.4s ease,
     background-color 0.4s ease;
-}
-
-
-/* icon ikut nyala */
-.small-box i {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.small-box:hover i {
-  color: #4da3ff;
-  transform: scale(1.2);
-}
-
-.skill .fill {
-  transition: width 1.2s ease, filter 0.3s ease;
-}
-
-.skill:hover .fill {
-  filter: brightness(1.25);
-}
-
-.skill span {
-  transition: color 0.3s ease;
-}
-
-.skill:hover span {
-  color: #4da3ff;
 }
 
 .tag {
@@ -792,14 +747,6 @@ html {
     background-color 0.3s ease,
     color 0.3s ease;
 }
-
-.tag:hover {
-  background-color: #4da3ff;
-  color: #0b0b0b;
-  box-shadow: 0 10px 22px rgba(77, 163, 255, 0.55);
-  transform: translateY(-4px) scale(1.06);
-}
-
 
 
 /* Mobile */
@@ -947,20 +894,6 @@ html {
 }
 
 
-/* --- ICON HOVER --- */
-.icon-item.show:hover {
-  transform: translateY(-8px) scale(1.08);
-  box-shadow:
-    0 10px 20px rgba(255, 215, 0, 0.45),
-    inset 0 0 0 1px rgba(255,255,255,0.25);
-}
-
-.icon-item.show:hover img {
-  transform: scale(1.1);
-  transition: transform 0.25s ease;
-}
-
-
 /* Icon reveal animation !!imprtant */
 .icon-item {
   opacity: 0;
@@ -1096,10 +1029,6 @@ html {
 }
 
 
-.timeline-item:hover {
-  --hoverY: 0;
-  --hoverScale: 1;
-}
 
 .timeline-box {
   transition:
@@ -1109,20 +1038,6 @@ html {
     transform 0.35s ease;
 }
 
-.timeline-box:hover {
-  transform: translateY(-10px) scale(1.02);
- --hoverY: -10px;
-  --hoverScale: 1.02;
-
-  box-shadow: 0 9px 10px yellow;
-  border-color: #6767f7;
-  /* background: linear-gradient(
-    160deg,
-    #0a2a6a,
-    #6767f7
-  ); */
-  
-}
 
 
 /* Moblie layout */
@@ -1253,14 +1168,6 @@ gap: 40px;
   background-color: #081f4e;
 }
 
-/* hover */
-.experience-card:hover {
-  --hoverY: -10px;
-  --hoverScale: 1.02;
-
-  box-shadow: 0 9px 10px yellow;
-  border-color: #6767f7;
-}
 
 
 .experience-card {
@@ -1376,13 +1283,7 @@ align-items: flex-start;
   transform: translateY(0);
 }
 
-/* --- HOVER (DESKTOP ONLY) --- */
-.project-card.show:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow:
-    0 12px 18px yellow,
-    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-}
+
 
 /* --- IMAGE --- */
 .project-card img {
@@ -1394,9 +1295,7 @@ align-items: flex-start;
   transition: transform 0.35s ease;
 }
 
-.project-card.show:hover img {
-  transform: scale(1.05);
-}
+
 
 /* --- TEXT --- */
 .project-card h3 {
@@ -1467,13 +1366,6 @@ align-items: flex-start;
   transform: translateY(0);
 }
 
-/* --- HOVER (DESKTOP ONLY) --- */
-.project-card.show:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow:
-    0 12px 18px yellow,
-    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-}
 
 /* --- IMAGE --- */
 .project-card img {
@@ -1485,9 +1377,6 @@ align-items: flex-start;
   transition: transform 0.35s ease;
 }
 
-.project-card.show:hover img {
-  transform: scale(1.05);
-}
 
 /* --- TEXT --- */
 .project-card h3 {
@@ -1840,14 +1729,6 @@ align-items: flex-start;
 }
 
 
-  .contact-box:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 9px 10px yellow;
-  }
-
-  .contact-box:hover .contact-icon {
-    transform: scale(1.2) rotate(6deg);
-  }
 
   .social-icons a:hover {
     transform: translateY(-4px) scale(1.1);
@@ -1879,14 +1760,12 @@ align-items: flex-start;
   .contact-box,
   .contact-form,
   .contact-image {
-    transform: translateY(70px); /* dorong lebih jauh supaya animasi keliatan */
+    transform: translateY(70px); 
   }
 }
 
 
  
-  
-
 /* --- RESPONSIVE GRID --- */
 @media (max-width: 1024px) {
   .contact-grid {

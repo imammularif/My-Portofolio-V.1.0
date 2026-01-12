@@ -270,7 +270,7 @@ body {
 
 .project-header {
   margin-bottom: 60px;
-  padding-left: 80px; /* sejajar sama timeline */
+  padding-left: 80px; 
 }
 
 .project-title {
@@ -340,10 +340,7 @@ body {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(255, 255, 0, 0.35);
-}
+
 
 /* IMAGE */
 .project-image {
@@ -362,9 +359,6 @@ body {
   transition: transform 0.4s ease;
 }
 
-.project-card:hover img {
-  transform: scale(1.08);
-}
 
 /* CONTENT */
 .project-content h2 {
@@ -486,9 +480,7 @@ body {
   will-change: transform;
 }
 
-.project-card:hover {
-  transform: translateY(-10px) scale(1.01);
-}
+
 
 
 
