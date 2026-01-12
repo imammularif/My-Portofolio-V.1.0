@@ -1780,35 +1780,6 @@ align-items: flex-start;
 }
 
 
-/* --- MOBILE TAP EFFECT --- */
-
-/* Contact Box */
-.contact-box.tap-active {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 9px 10px yellow;
-}
-
-.contact-box.tap-active .contact-icon {
-  transform: scale(1.2) rotate(6deg);
-}
-
-/* Social Icons */
-.social-icons a.tap-active {
-  transform: translateY(-4px) scale(1.1);
-  background: rgba(255, 255, 0, 0.85);
-  color: #000;
-}
-
-
-/* --- MOBILE UX SAFETY --- */
-.contact-box,
-.social-icons a {
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
-
-
 /* ================= FOOTER ================= */
 
 .footer {
