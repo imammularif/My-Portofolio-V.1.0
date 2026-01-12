@@ -665,8 +665,8 @@ function handleScrollAnimation() {
   scrollElements.forEach(el => {
     const rect = el.getBoundingClientRect();
 
-    // Hanya tambahkan class sekali, jangan di-remove
-    if(rect.top < windowHeight && !el.classList.contains('scroll-active')) {
+    // tambah class sekali saja
+    if(rect.top < windowHeight - 50 && !el.classList.contains('scroll-active')) {
       el.classList.add('scroll-active');
     }
   });
@@ -674,6 +674,7 @@ function handleScrollAnimation() {
 
 window.addEventListener('scroll', handleScrollAnimation);
 window.addEventListener('load', handleScrollAnimation);
+
 
 
 
