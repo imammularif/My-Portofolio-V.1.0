@@ -626,7 +626,7 @@ html {
 /* BOX UMUM */
 .box {
   flex: 1;
-  background: #111;
+  /* background: #111; */
   color: #fff;
   padding: 25px;
   border-radius: 15px;
@@ -669,7 +669,7 @@ html {
   justify-content: center;
   gap: 8px;
 
-  background: rgba(253, 251, 251, 0.05);
+  /* background: rgba(253, 251, 251, 0.05); */
   border-radius: 15px;
   color: white;
   text-align: center;
@@ -693,6 +693,25 @@ html {
 }
 
 
+/* fade */
+.small-box,
+.certificate-card,
+.certificate-year,
+.project-timeline-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.small-box.active,
+.certificate-card.active,
+.certificate-year.active,
+.project-timeline-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* SKILLS */
 .skill {
   margin-bottom: 18px;
@@ -708,7 +727,7 @@ html {
 .bar {
   width: 100%;
   height: 8px;
-  background: #333;
+  /* background: #333; */
   border-radius: 10px;
   overflow: hidden;
 }
@@ -960,7 +979,6 @@ html {
 }
 
 
-/* Icon reveal animation !!imprtant */
 .icon-item {
   opacity: 0;
   transform: translateY(24px) scale(0.95);
@@ -973,6 +991,7 @@ html {
     opacity 0.5s ease,
     transform 0.5s ease;
 }
+
 
 
 
@@ -1352,6 +1371,10 @@ align-items: flex-start;
   transform: translateY(0);
 }
 
+/* fade */
+
+
+
 
 
 /* --- IMAGE --- */
@@ -1409,31 +1432,6 @@ align-items: flex-start;
   gap: 30px;
 }
 
-/* --- CARD --- */
-.project-card {
-  background-color: #081f4e;
-  border-radius: 20px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-
-  box-shadow: 0 9px 10px rgba(77, 163, 255, 0.6);
-
-  /* animation state */
-  opacity: 0;
-  transform: translateY(30px);
-
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease,
-    box-shadow 0.4s ease;
-}
-
-/* --- CARD APPEAR --- */
-.project-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 
 /* --- IMAGE --- */
@@ -1662,6 +1660,29 @@ align-items: flex-start;
   box-shadow: 0 10px 20px rgba(255, 255, 0, 0.5);
 }
 
+/* fade */
+.contact-form,
+.contact-form h2,
+.contact-form p,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.contact-form.active,
+.contact-form h2.active,
+.contact-form p.active,
+.contact-form input.active,
+.contact-form textarea.active,
+.contact-form button.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* IMAGE */
 .contact-image {
   flex: 1;
@@ -1731,6 +1752,7 @@ align-items: flex-start;
 
 /* ================= CONTACT SECTION ================= */
 
+/* punya text messege */
 .contact-section {
   padding: 90px 8%;
   margin-top: -50px;
@@ -1842,6 +1864,23 @@ align-items: flex-start;
   opacity: 1;
   transform: translateY(0);
 }
+
+/* fade */
+.contact-box,
+.contact-form,
+.contact-image {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.contact-box.scroll-active,
+.contact-form.scroll-active,
+.contact-image.scroll-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* Mobile tweak */
 @media (max-width: 768px) {

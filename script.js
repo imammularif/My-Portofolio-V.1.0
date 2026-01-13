@@ -532,9 +532,171 @@ window.addEventListener('load', handleScrollAnimation);
 
 
 
-// scrol project
+// 3 boxes
 
-// JavaScript
+document.addEventListener("DOMContentLoaded", function() {
+  // semua elemen yang mau fade
+  const revealElements = Array.from(document.querySelectorAll(
+    '.small-box, .certificate-card, .certificate-year, .project-timeline-item'
+  ));
+  const windowHeight = window.innerHeight;
+
+  function revealOnScroll() {
+    // ambil elemen yang belum aktif
+    const hiddenElements = revealElements.filter(el => !el.classList.contains('active'));
+
+    // ambil elemen yang terlihat saat ini (apapun arah scroll)
+    const visibleElements = hiddenElements.filter(el => {
+      const rect = el.getBoundingClientRect();
+      return rect.top < windowHeight && rect.bottom > 0;
+    });
+
+    // tambahkan stagger per batch
+    visibleElements.forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.15) + 's';
+      el.classList.add('active');
+    });
+  }
+
+  // jalankan sekali saat load → elemen yang sudah visible langsung muncul
+  revealOnScroll();
+
+  // jalankan setiap scroll
+  window.addEventListener('scroll', revealOnScroll);
+});
+
+
+
+// icon fade
+document.addEventListener("DOMContentLoaded", function() {
+  const icons = Array.from(document.querySelectorAll('.icon-item'));
+  const windowHeight = window.innerHeight;
+
+  function revealIcons() {
+    // elemen yang belum aktif
+    const hiddenIcons = icons.filter(el => !el.classList.contains('show'));
+
+    // ambil elemen yang terlihat saat ini
+    const visibleIcons = hiddenIcons.filter(el => {
+      const rect = el.getBoundingClientRect();
+      return rect.top < windowHeight && rect.bottom > 0;
+    });
+
+    // tambahkan stagger per batch
+    visibleIcons.forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.1) + 's'; // bisa diubah sesuai selera
+      el.classList.add('show');
+    });
+  }
+
+  // jalankan sekali saat load → elemen visible langsung muncul
+  revealIcons();
+
+  // jalankan tiap scroll
+  window.addEventListener('scroll', revealIcons);
+});
+
+
+// project fade index
+document.addEventListener("DOMContentLoaded", function() {
+  const cards = Array.from(document.querySelectorAll('.project-card'));
+  const windowHeight = window.innerHeight;
+
+  function revealCards() {
+    // elemen yang belum aktif
+    const hiddenCards = cards.filter(el => !el.classList.contains('show'));
+
+    // ambil elemen yang terlihat saat ini
+    const visibleCards = hiddenCards.filter(el => {
+      const rect = el.getBoundingClientRect();
+      return rect.top < windowHeight && rect.bottom > 0;
+    });
+
+    // tambahkan stagger per batch
+    visibleCards.forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.15) + 's';
+      el.classList.add('show');
+    });
+  }
+
+  // jalankan sekali saat load → elemen visible langsung muncul
+  revealCards();
+
+  // jalankan tiap scroll
+  window.addEventListener('scroll', revealCards);
+});
+
+
+// text area fade
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = Array.from(document.querySelectorAll(
+    '.contact-form, .contact-form h2, .contact-form p, .contact-form input, .contact-form textarea, .contact-form button'
+  ));
+  const windowHeight = window.innerHeight;
+
+  function revealContact() {
+    // elemen yang belum aktif
+    const hiddenElements = elements.filter(el => !el.classList.contains('active'));
+
+    // ambil elemen yang terlihat saat ini
+    const visibleElements = hiddenElements.filter(el => {
+      const rect = el.getBoundingClientRect();
+      return rect.top < windowHeight && rect.bottom > 0;
+    });
+
+    // tambahkan stagger per batch
+    visibleElements.forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.1) + 's';
+      el.classList.add('active');
+    });
+  }
+
+  // jalankan sekali saat load → elemen visible langsung muncul
+  revealContact();
+
+  // jalankan tiap scroll
+  window.addEventListener('scroll', revealContact);
+});
+
+
+// fade contact box
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = Array.from(document.querySelectorAll('.contact-box, .contact-form, .contact-image'));
+  const windowHeight = window.innerHeight;
+
+  function revealElements() {
+    // ambil elemen yang belum aktif
+    const hiddenElements = elements.filter(el => !el.classList.contains('scroll-active'));
+
+    // ambil elemen yang terlihat saat ini
+    const visibleElements = hiddenElements.filter(el => {
+      const rect = el.getBoundingClientRect();
+      return rect.top < windowHeight && rect.bottom > 0;
+    });
+
+    // stagger per batch
+    visibleElements.forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.15) + 's';
+      el.classList.add('scroll-active');
+    });
+  }
+
+  // jalankan sekali saat load → elemen visible langsung muncul
+  revealElements();
+
+  // jalankan tiap scroll
+  window.addEventListener('scroll', revealElements);
+});
+
+
+
+
+
+
+
+
+
+
 
 
 

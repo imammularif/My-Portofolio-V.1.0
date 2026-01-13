@@ -538,6 +538,39 @@ body {
   transform: translateY(0);
 }
 
+/* fade */
+/* header slide left */
+.project-header {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.6s ease;
+}
+
+.project-header.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* line ikut scale */
+.project-header.active .project-line {
+  opacity: 1;
+  transform: scaleX(1);
+  transition: all 0.6s ease;
+}
+
+/* timeline items slide up */
+.project-timeline-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.project-timeline-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 
 
