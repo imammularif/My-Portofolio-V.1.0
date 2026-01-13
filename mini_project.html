@@ -354,6 +354,49 @@
 <script src="script.js"></script>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll('.project-timeline');
+
+  sections.forEach(section => {
+    const timelineItems = section.querySelectorAll('.project-timeline-item');
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      const revealPoint = 150;
+
+      timelineItems.forEach((el, i) => {
+        if (!el.classList.contains('active') &&
+            el.getBoundingClientRect().top < windowHeight - revealPoint) {
+          el.style.transitionDelay = (i * 0.15) + 's'; // delay kecil per section
+          el.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  });
+
+  // header muncul langsung
+  const headers = document.querySelectorAll('.project-header');
+  headers.forEach(header => {
+    function revealHeader() {
+      const windowHeight = window.innerHeight;
+      const revealPoint = 150;
+      if (!header.classList.contains('active') &&
+          header.getBoundingClientRect().top < windowHeight - revealPoint) {
+        header.classList.add('active');
+      }
+    }
+    window.addEventListener('scroll', revealHeader);
+    window.addEventListener('load', revealHeader);
+  });
+});
+
+
+</script>
+
 
 
 </body>

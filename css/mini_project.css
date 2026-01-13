@@ -511,47 +511,36 @@ body {
   color: #081f4e;
 }
 
-/* ===== ANIMATION KEYFRAMES ===== */
-@keyframes fadeSlideLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.project-header {
-  animation: fadeSlideLeft 0.8s ease forwards;
-}
-
-.project-line {
-  animation: fadeSlideLeft 1s ease forwards;
-}
-
+/* default semua hidden */
+.project-header,
+.project-line,
 .project-timeline-item {
   opacity: 0;
-  animation: fadeSlideUp 0.8s ease forwards;
+  transform: translateY(40px); /* offset default */
+  transition: all 0.6s ease;
 }
 
-/* efek delay otomatis */
-.project-timeline-item:nth-child(1) { animation-delay: 0.2s; }
-.project-timeline-item:nth-child(2) { animation-delay: 0.4s; }
-.project-timeline-item:nth-child(3) { animation-delay: 0.6s; }
-.project-timeline-item:nth-child(4) { animation-delay: 0.8s; }
+/* header slide-left */
+.project-header.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* line ikut scale */
+.project-header.active .project-line {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* timeline items slide-up */
+.project-timeline-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
 
 .timeline-dot {
   animation: pulseDot 1.6s infinite;

@@ -532,6 +532,15 @@ window.addEventListener('load', handleScrollAnimation);
 
 
 
+// scrol project
+
+// JavaScript
+
+
+
+
+
+
 
 
 
