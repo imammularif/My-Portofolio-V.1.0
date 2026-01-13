@@ -329,8 +329,6 @@ body {
 }
 
 
-
-
 /* <!------------------------------------------------------------------------------------------------------------> */
 
 .project-header {
@@ -398,10 +396,11 @@ body {
   display: flex;
   gap: 30px;
   background: #081f4e;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 25px;
   margin-left: 60px;
-  box-shadow: 0 10px 25px rgba(77, 163, 255, 0.25);
+  box-shadow: 0 5px 10px rgba(77, 163, 255, 0.6);
+  border: 2px solid rgba(58, 167, 240, 0.8) !important;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -463,14 +462,15 @@ body {
   font-weight: 500;
   color: #081f4e;
   background: yellow;
-  border-radius: 20px;
+  border-radius: 15px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .project-link:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(255, 255, 0, 0.45);
+  box-shadow: 0 5px 10px rgba(77, 163, 255, 0.6);
+
 }
 
 /* SECONDARY LINK */

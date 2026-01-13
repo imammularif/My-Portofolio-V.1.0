@@ -360,9 +360,10 @@ body {
   position: relative;
   overflow: visible; 
   background: #081f4e;
-  border-radius: 14px;
+  border-radius: 15px;
   padding: 10px;
-  box-shadow: 0 6px 12px rgba(77,163,255,.4);
+  box-shadow: 0 5px 10px rgba(77, 163, 255, 0.6);
+  border: 2px solid rgba(58, 167, 240, 0.8) !important;
   transition: transform .3s ease, box-shadow .3s ease;
   color: white;
 }
@@ -391,9 +392,6 @@ body {
   padding: 0 8px;
   color: #fff;
 }
-
-
-
 
 
 .certificate-card img {
@@ -440,11 +438,12 @@ body {
 /* TABLET */
 @media (max-width: 1024px) {
   .certificate-grid {
-    grid-template-columns: repeat(2, 220px);
+    grid-template-columns: 1fr;
     justify-content: center;
     gap: 30px;
   }
 }
+
 
 /* MOBILE */
 @media (max-width: 600px) {

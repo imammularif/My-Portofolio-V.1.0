@@ -1492,7 +1492,7 @@ align-items: flex-start;
   transform: translateY(var(--ty)) scale(var(--s));
 
   padding: 14px 36px;
-  border-radius: 999px;
+  border-radius: 15px;
   background: linear-gradient(135deg, #ffd700, #ffb700);
   color: #081f4e;
   font-weight: 700;
@@ -1517,7 +1517,7 @@ align-items: flex-start;
 .view-all .btn-primary.show:hover {
   --ty: -6px;
   --s: 1.05;
-  box-shadow: 0 14px 30px rgba(255, 215, 0, 0.6);
+  box-shadow: 0 5px 10px rgba(77, 163, 255, 0.6);
 }
 
 /* ACTIVE */
