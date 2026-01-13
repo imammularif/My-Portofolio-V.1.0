@@ -1,7 +1,7 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   /* background-color: rgb(9, 3, 25); */
-  background: linear-gradient(150deg, #090319, #081f4e);
+  background: linear-gradient(150deg, #08080e, #081f4e);
   margin: 0;
   overflow-x: hidden;
 }
@@ -377,7 +377,7 @@ html {
 .parallax-bg {
   position: absolute;
   inset: 0;
-  background-image: url("../image/bg.jpeg");
+  background-image: url("../image/earth.jpg");
   background-size: cover;
   background-position: center;
   z-index: 0;
