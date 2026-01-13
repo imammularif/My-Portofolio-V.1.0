@@ -625,7 +625,7 @@ html {
 .profile {
   display: flex;
   height: 100vh;
-  min-height: 70vh; 
+  
 }
 
 .box {
