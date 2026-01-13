@@ -720,8 +720,8 @@ html {
   width: 0;
   background: linear-gradient(90deg, #1e90ff, #00bfff);
   border-radius: 15px;
-  transition: width 1s ease;
-  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: width 1s ease;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); */
 
 }
 
