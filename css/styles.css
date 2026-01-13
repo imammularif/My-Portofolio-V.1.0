@@ -90,15 +90,45 @@ html {
 
 /* MOBILE RESPONSIVE */
 /* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  /* pastikan parent juga flex dan center */
-  .left {
-    display: flex;
-    flex-direction: column;  /* stack vertikal untuk teks → CTA → sosmed */
-    align-items: center;     /* center semua isi */
-    text-align: center;
-    transform: translateY(-80px);
+
+/* MOBILE + TABLET (SATU SISTEM) */
+@media (max-width: 1024px) {
+
+  .profile {
+    position: relative;
   }
+
+  /* TEKS */
+  .left {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    transform: translateY(clamp(-50px, -7vh, -25px));
+  }
+
+  /* FOTO */
+  .right {
+    position: relative;
+    z-index: 1;
+
+    transform: translateY(clamp(-35px, -5vh, -15px));
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile {
+    align-items: flex-start; /* jangan center */
+    gap: 10px;               /* RAPET */
+    padding-top: 40px;
+  }
+}
+
+
 
   /* CTA Buttons horizontal */
   .cta-buttons {
