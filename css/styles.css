@@ -97,6 +97,7 @@ html {
     flex-direction: column;  /* stack vertikal untuk teks → CTA → sosmed */
     align-items: center;     /* center semua isi */
     text-align: center;
+    transform: translateY(-80px);
   }
 
   /* CTA Buttons horizontal */
@@ -134,8 +135,8 @@ html {
   }
 
   .social img {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
 
   .social:hover {
