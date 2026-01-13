@@ -25,25 +25,24 @@ html {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* cta */
 /* CTA Buttons */
 .cta-buttons {
-  margin-top: 20px;
+  margin-top: 16px;      /* dikit dirapetin */
   display: flex;
-  gap: 15px;
+  gap: 14px;
 }
 
 .btn {
   padding: 10px 22px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: transform 0.25s ease, background 0.25s ease;
   color: white;
 }
 
 .btn-cv {
-  background: #f39c12; 
+  background: #f39c12;
 }
 
 .btn-cv:hover {
@@ -52,7 +51,7 @@ html {
 }
 
 .btn-connect {
-  background: #2980b9; 
+  background: #2980b9;
 }
 
 .btn-connect:hover {
@@ -62,33 +61,61 @@ html {
 
 /* Social Media Icons */
 .social-icons {
-  margin-top: 25px;
+  margin-top: 18px;     /* DIRAPETIN */
   display: flex;
-  gap: 15px;
+  gap: 14px;
 }
 
 .social {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 46px;          /* sedikit lebih kecil */
+  height: 46px;
   border-radius: 12px;
-  background: rgba(218, 218, 218, 0.1); 
-  transition: transform 0.3s ease, background 0.3s ease;
+  background: rgba(218, 218, 218, 0.1);
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .social img {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 
 .social:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.2); 
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
 }
 
+@media (max-width: 1024px) {
 
+  .cta-buttons {
+    margin-top: 12px;    /* RAPET */
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 12px;    /* RAPET BANGET */
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .social {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social img {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 
 /* ========================= PEMBATAS ============================= */
