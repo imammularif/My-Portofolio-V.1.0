@@ -91,46 +91,58 @@ html {
 /* MOBILE RESPONSIVE */
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
-  /* CTA Buttons */
-  .cta-buttons {
-    flex-direction: column; 
-    gap: 12px;             
-    margin-top: 3vh;
-    align-items: center;   
-  }
-
-  .cta-buttons .btn {
-    padding: 8px 18px;     
-    font-size: 12px;      
-    width: 170px;         
+  /* pastikan parent juga flex dan center */
+  .left {
+    display: flex;
+    flex-direction: column;  /* stack vertikal untuk teks → CTA → sosmed */
+    align-items: center;     /* center semua isi */
     text-align: center;
   }
 
-  /* Social Media Icons */
-  .social-icons {
-    margin-top: 4vh;
+  /* CTA Buttons horizontal */
+  .cta-buttons {
+    display: flex !important;       /* paksa flex */
+    flex-direction: row !important; /* horizontal */
     gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;        
+    justify-content: center !important;
+    align-items: center;
+    margin-top: 3vh;
+    width: 100%;
+  }
+
+  .cta-buttons .btn {
+    width: auto;
+    min-width: 120px;
+    padding: 8px 18px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* Social Icons di bawah CTA */
+  .social-icons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px;
+    margin-top: 4vh;
+    flex-wrap: wrap;
   }
 
   .social {
-    width: 40px;  
+    width: 40px;
     height: 40px;
     border-radius: 10px;
   }
 
   .social img {
-    width: 20px;  
+    width: 20px;
     height: 20px;
   }
 
   .social:hover {
-    transform: translateY(-2px); 
+    transform: translateY(-2px);
   }
-
 }
+
 
 
 
