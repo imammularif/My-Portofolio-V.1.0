@@ -1,9 +1,12 @@
-// loct orientation
-  if (screen.orientation && screen.orientation.lock) {
-    screen.orientation.lock("portrait").catch(() => {
-      console.log("Orientation lock not supported");
-    });
-  }
+// PWA
+
+self.addEventListener("install", (e) => {
+  self.skipWaiting();
+});
+
+self.addEventListener("activate", (e) => {
+  clients.claim();
+});
 
 
 /* ========================== LAYOUT RESPONSIVE ============================== */
