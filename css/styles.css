@@ -317,6 +317,18 @@ html {
 }
 
 
+@media (max-width: 1024px) and (orientation: landscape) {
+  .cta-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+  }
+}
+
+
+
 
 
 /* ========================= PEMBATAS ============================= */
