@@ -1,3 +1,10 @@
+// loct orientation
+  if (screen.orientation && screen.orientation.lock) {
+    screen.orientation.lock("portrait").catch(() => {
+      console.log("Orientation lock not supported");
+    });
+  }
+
 
 /* ========================== LAYOUT RESPONSIVE ============================== */
 
