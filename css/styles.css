@@ -1544,6 +1544,26 @@ align-items: flex-start;
 }
 
 
+@media (max-width: 768px) {
+
+  /* tap effect */
+  .view-all .btn-primary.show:active {
+    --ty: -4px;
+    --s: 1.04;
+    box-shadow: 0 4px 8px rgba(77, 163, 255, 0.5);
+  }
+
+  /* keyboard / accessibility */
+  .view-all .btn-primary.show:focus-visible {
+    --ty: -4px;
+    --s: 1.04;
+    box-shadow: 0 4px 8px rgba(77, 163, 255, 0.5);
+  }
+
+}
+
+
+
 
 /* ================= SEND MESSEGES ================= */
 
