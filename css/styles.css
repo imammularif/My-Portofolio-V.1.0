@@ -267,6 +267,71 @@ html {
 }
 
 
+/* ================== TABLET LANDSCAPE FIX TOTAL ================== */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .profile-section {
+    min-height: 100vh;
+    padding: 40px 0;
+  }
+
+  .profile {
+    height: 100%;
+    align-items: stretch;
+  }
+
+  /* LEFT jadi GRID */
+  .left {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    row-gap: 12px;
+  }
+
+  /* JUDUL */
+  .left h1 {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+
+  .left h3 {
+    font-size: 15px;
+    margin-top: 6px;
+  }
+
+  /* CTA */
+  .cta-buttons {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 9px 18px;
+    font-size: 14px;
+  }
+
+  /* SOCIAL DIPAKSA NAIK */
+  .social-icons {
+    margin-top: 8px;
+    padding-bottom: 10px;
+  }
+
+  .social {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* FOTO DIKECILIN */
+  .right {
+    align-items: center;
+  }
+
+  .right img {
+    max-width: 260px;
+  }
+}
+
+
+
 
 /* ========================= PEMBATAS ============================= */
 
