@@ -1482,6 +1482,7 @@ align-items: flex-start;
 }
 
 /* --- BUTTON --- */
+/* default tombol */
 .btn-primary {
   padding: 14px 36px;
   border-radius: 999px;
@@ -1493,16 +1494,30 @@ align-items: flex-start;
 
   box-shadow: 0 10px 25px rgba(255, 215, 0, 0.45);
 
-  transition: transform 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+/* hover desktop */
 .btn-primary:hover {
   transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 14px 30px rgba(255, 215, 0, 0.55);
 }
 
+/* tap/active desktop */
 .btn-primary:active {
   transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.45);
 }
+
+/* MOBILE TAP EFFECT */
+@media (max-width: 768px) {
+  .btn-primary:active,
+  .btn-primary:focus-visible {
+    transform: translateY(-6px) scale(1.05); /* mirip hover desktop */
+    box-shadow: 0 14px 30px rgba(255, 215, 0, 0.55);
+  }
+}
+
 
 /* animated scroll */
 /* --- SCROLL ANIMATION BUTTON --- */
@@ -1566,23 +1581,6 @@ align-items: flex-start;
   }
 }
 
-
-@media (max-width: 768px) {
-
-  /* tap effect */
-  .view-all .btn-primary.show:active {
-    --ty: -4px;
-    --s: 1.04;
-    box-shadow: 0 4px 8px rgba(77, 163, 255, 0.5);
-  }
-
-  /* keyboard / accessibility */
-  .view-all .btn-primary.show:focus-visible {
-    --ty: -4px;
-    --s: 1.04;
-    box-shadow: 0 4px 8px rgba(77, 163, 255, 0.5);
-  }
-}
 
 
 
