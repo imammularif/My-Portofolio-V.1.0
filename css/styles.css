@@ -25,6 +25,113 @@ html {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* cta */
+/* CTA Buttons */
+.cta-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.btn-cv {
+  background: #f39c12; /* oranye */
+}
+
+.btn-cv:hover {
+  background: #e67e22;
+  transform: translateY(-2px);
+}
+
+.btn-connect {
+  background: #2980b9; /* biru */
+}
+
+.btn-connect:hover {
+  background: #3498db;
+  transform: translateY(-2px);
+}
+
+/* Social Media Icons */
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(218, 218, 218, 0.1); 
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social img {
+  width: 24px;
+  height: 24px;
+}
+
+.social:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2); 
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  /* Social icons tetap seperti sebelumnya */
+  .social-icons {
+    margin-top: 20px;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .social img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .social:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Huruf lebih kecil di mobile */
+  .profile h1 {
+    font-size: 28px; /* sebelumnya mungkin 40px atau lebih */
+  }
+
+  .profile h3 {
+    font-size: 16px; /* sebelumnya 18-20px */
+  }
+
+  .cta-buttons .btn {
+    font-size: 10px; /* tombol lebih pas di mobile */
+    padding: 8px 16px;
+  }
+}
+
+
+
+
+
 
 
 /* ========================= PEMBATAS ============================= */
@@ -727,7 +834,7 @@ html {
 .bar {
   width: 100%;
   height: 8px;
-  /* background: #333; */
+  background: #333;
   border-radius: 10px;
   overflow: hidden;
 }
