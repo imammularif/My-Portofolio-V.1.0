@@ -268,9 +268,18 @@ html {
 
 
 @media (max-width: 1024px) and (orientation: landscape) {
+
+  .profile-section {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   .profile {
     flex-direction: column-reverse;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 }
 
