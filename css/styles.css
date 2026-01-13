@@ -94,16 +94,16 @@ html {
 
   /* CTA Buttons */
   .cta-buttons {
-    flex-direction: column; /* tombol stack di atas-bawah di HP */
-    gap: 12px;             /* jarak lebih kecil */
+    flex-direction: column; 
+    gap: 12px;             
     margin-top: 15px;
-    align-items: center;   /* tengah layar */
+    align-items: center;   
   }
 
   .cta-buttons .btn {
-    padding: 8px 18px;     /* tombol lebih kecil */
-    font-size: 12px;       /* font lebih proporsional */
-    width: 170px;          /* lebar tombol pas HP */
+    padding: 8px 18px;     
+    font-size: 12px;      
+    width: 170px;         
     text-align: center;
   }
 
@@ -111,23 +111,23 @@ html {
   .social-icons {
     margin-top: 20px;
     gap: 12px;
-    justify-content: center; /* tengah layar */
-    flex-wrap: wrap;         /* pindah ke baris kedua jika sempit */
+    justify-content: center;
+    flex-wrap: wrap;        
   }
 
   .social {
-    width: 40px;   /* ikon lebih kecil */
+    width: 40px;  
     height: 40px;
     border-radius: 10px;
   }
 
   .social img {
-    width: 20px;   /* ikon pas ukuran tombol */
+    width: 20px;  
     height: 20px;
   }
 
   .social:hover {
-    transform: translateY(-2px); /* hover lebih subtle */
+    transform: translateY(-2px); 
   }
 
 }
