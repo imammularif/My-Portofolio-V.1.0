@@ -145,31 +145,36 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const revealElements = Array.from(document.querySelectorAll('.certificate-card, .certificate-year'));
+  const windowHeight = window.innerHeight;
+  const revealPoint = 150;
 
   function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 150;
-
     // ambil elemen yang belum aktif
     const hiddenElements = revealElements.filter(el => !el.classList.contains('active'));
 
-    // ambil elemen yang visible saat scroll
+    // ambil elemen yang terlihat saat ini
     const visibleElements = hiddenElements.filter(el => {
       const rect = el.getBoundingClientRect();
       return rect.top < windowHeight - revealPoint && rect.bottom > 0;
     });
 
-    // tambahkan stagger delay hanya untuk elemen visible saat ini
+    // tambahkan stagger **per batch visible**, tidak menunggu elemen di atas
     visibleElements.forEach((el, i) => {
       el.style.transitionDelay = (i * 0.15) + 's';
       el.classList.add('active');
     });
   }
 
+  // jalankan sekali saat load → elemen yang sudah di viewport langsung aktif tanpa delay
+  revealOnScroll();
+
+  // jalankan setiap scroll
   window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
 });
 </script>
+
+
+
 
 
 
