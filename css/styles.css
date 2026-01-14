@@ -2245,9 +2245,21 @@ align-items: flex-start;
   }
 
   .right img {
-    max-width: 180px;
+  width: 260px;
+  max-width: none;
+  transform: scale(1.1);
+  }
+
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .right img {
+    width: 160px !important;
+    height: 160px !important;
+    transform: scale(1.1);
   }
 }
+
 
 @media screen and (orientation: landscape) and (max-width: 768px) {
   .typing-text,
