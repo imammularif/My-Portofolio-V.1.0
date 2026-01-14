@@ -1055,6 +1055,17 @@ html {
 
 
 /* Mobile */
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .parallax-section,
+  .profile-section,
+  .profile {
+    min-height: auto !important;
+    height: auto !important;
+  }
+}
+
+
+
 @media (max-width: 768px) {
 
   .box.profile {
