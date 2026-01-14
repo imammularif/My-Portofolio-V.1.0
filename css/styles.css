@@ -657,27 +657,27 @@ html {
 
 /* typing text */
 .typing-text {
-
-  
-  display: inline-block;
-  white-space: nowrap;
-
-  line-height: 1.2;      
-  min-height: 1.2em;   
-  margin: 0;
-
-  border-right: 3px solid yellow;
-  padding-right: 0px;
-
-  animation: blink 0.9s step-end infinite;
+  display: inline;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.2;
 }
 
+.typing-cursor {
+  display: inline-block;
+  margin-left: 3px;
+  font-weight: 400;
+  color: yellow;
+  animation: blink 1s step-end infinite;
+}
 
 @keyframes blink {
   50% {
-    border-color: transparent;
+    opacity: 0;
   }
 }
+
+
 
 
 /* Content 1 */

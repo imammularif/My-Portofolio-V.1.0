@@ -396,7 +396,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // typing animation
-const typingText = document.querySelector(".typing-text");
+const typingTextEl = document.querySelector(".typing-text");
+
+// TAMBAH CURSOR TANPA UBAH HTML
+typingTextEl.innerHTML = `<span class="text"></span><span class="typing-cursor">|</span>`;
+
+const textSpan = typingTextEl.querySelector(".text");
+const cursor = typingTextEl.querySelector(".typing-cursor");
 
 const texts = [
   "Imammul Arif",
@@ -412,9 +418,9 @@ function typeLoop() {
   const current = texts[textIndex];
 
   if (!isDeleting) {
-    typingText.textContent = current.slice(0, charIndex++);
+    textSpan.textContent = current.slice(0, charIndex++);
   } else {
-    typingText.textContent = current.slice(0, charIndex--);
+    textSpan.textContent = current.slice(0, charIndex--);
   }
 
   let speed = isDeleting ? 45 : 80;
@@ -434,6 +440,9 @@ function typeLoop() {
 }
 
 typeLoop();
+
+
+
 
 
 
