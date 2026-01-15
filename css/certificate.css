@@ -316,6 +316,25 @@ body {
 }
 
 /* --- MOBILE --- */
+/* desktop */
+@media (min-width: 769px) {
+  .hamburger {
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger:active {
+    transform: rotate(90deg);
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    transition: none;
+  }
+}
+
+
 @media (max-width: 768px) {
 
   .hamburger {

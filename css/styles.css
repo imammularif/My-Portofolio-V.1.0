@@ -483,6 +483,9 @@ html {
 }
 
 /* --- MOBILE --- */
+
+
+/* mobile */
 /* desktop */
 @media (min-width: 769px) {
   .hamburger {
@@ -491,6 +494,13 @@ html {
 
   .hamburger:active {
     transform: rotate(90deg);
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    transition: none;
   }
 }
 
