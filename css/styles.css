@@ -738,7 +738,7 @@ html {
     text-align: center;
   }
 
-/* img */
+/* img mobile normal */
   .right {
     order: -1; 
     margin-bottom: 10px; 
@@ -746,8 +746,15 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 3200px;   /* gedein di sini */
+    height: auto;
   }
 
+  .right img {
+    width: 150px !important;
+    max-width: none !important;
+    height: 150px !important;
+  }
 
 
   /* TEKS */
