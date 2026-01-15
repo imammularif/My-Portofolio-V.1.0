@@ -387,24 +387,15 @@ html {
 
 /* --- HAMBURGER --- */
 .hamburger {
-  width: 44px;
-  height: 44px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  display: none;
   font-size: 30px;
-  line-height: 1;
-
   background: none;
   border: none;
   cursor: pointer;
   color: yellow;
 
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.2s ease;
 }
-
 
 .hamburger:active {
   transform: rotate(90deg) scale(1.1);
@@ -492,6 +483,18 @@ html {
 }
 
 /* --- MOBILE --- */
+/* desktop */
+@media (min-width: 769px) {
+  .hamburger {
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger:active {
+    transform: rotate(90deg);
+  }
+}
+
+
 @media (max-width: 768px) {
 
   .hamburger {
