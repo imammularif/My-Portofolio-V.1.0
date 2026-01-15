@@ -263,26 +263,29 @@ html {
 /* --- glass navbar --- */
 .topnav {
   position: fixed;
-  top: 25px;
+  top: 5px;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 50px);
+
+  width: calc(100% - 5px); /* jarak kiri kanan */
+  max-width: 1300px;       /* biar gak kepanjangan */
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px 19px;
-  border-radius: 15px;
+  justify-content: space-between;
+
+  padding: 10px 25px;
+  border-radius: 1px;
 
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background 0.3s ease;
-
-  z-index: 9999;    
-  isolation: isolate;
+  z-index: 9999;
 }
+
+
 
 
 
