@@ -340,9 +340,6 @@ body {
     margin-right: auto;
   }
 
-  .nav-menu.show {
-    display: block;  
-  }
 
   .nav-menu {
     flex-direction: column;
