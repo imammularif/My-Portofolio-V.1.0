@@ -598,10 +598,6 @@ body {
 }
 
 
-
-
-
-
 .timeline-dot {
   animation: pulseDot 1.6s infinite;
 }
@@ -621,9 +617,6 @@ body {
 .project-card {
   will-change: transform;
 }
-
-
-
 
 
 
@@ -690,6 +683,7 @@ body {
   /* CONTENT */
   .project-content h2 {
     font-size: 20px;
+    margin-top: -0.5px;
   }
 
   .project-content p {
