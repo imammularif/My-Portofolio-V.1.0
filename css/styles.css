@@ -1329,6 +1329,20 @@ html {
   font-weight: 600;
 }
 
+/* state awal (sembunyi) */
+.gaming-box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* saat muncul */
+.gaming-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .gaming-box {
