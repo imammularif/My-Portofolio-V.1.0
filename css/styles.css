@@ -1258,7 +1258,7 @@ html {
   max-width: 100vw;
 
   position: relative;
-  left: -5%;
+  left: -4%;
   transform: translateX(50%);
 
   margin: auto;
@@ -1385,9 +1385,6 @@ html {
 
 
 
-
-
-
 /* ================= EDUCATION ================= */
 
 /* ===== TIMELINE WRAPPER ===== */
@@ -1417,6 +1414,14 @@ html {
   text-align: right;
   
 }
+
+.timeline-item.left .timeline-box {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: 12px; /* lebih kecil = makin ke kanan */
+}
+
+
 
 /* POSISI KANAN */
 .timeline-item.right {
